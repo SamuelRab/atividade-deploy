@@ -75,7 +75,7 @@ export async function initializeDatabase() {
 
         await tempConnection.query(`
            CREATE TABLE IF NOT EXISTS produtos (
-    id INT AUTO_INCREMENT,
+     id INT AUTO_INCREMENT,
     nome VARCHAR(150) NOT NULL,
     descricao TEXT,
     preco DECIMAL(10,2) NOT NULL,
