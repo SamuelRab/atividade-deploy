@@ -8,9 +8,9 @@ import { initializeDatabase } from './configs/Database.js';
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
-app.use('/uploads', express.static(path.resolve(process.cwd(), 'uploads')));
+app.use('/images', express.static(path.resolve('src', 'uploads', 'images')));
+app.use(cors());
 app.use('/', routes);
 
 initializeDatabase().then(() => {
