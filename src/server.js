@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use('/images', express.static(path.resolve('src', 'uploads')));
+app.use('/images', express.static(path.resolve('src', 'uploads', 'images')));
 app.use('/', routes);
 
 initializeDatabase().then(() => {
